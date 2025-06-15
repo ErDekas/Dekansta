@@ -86,7 +86,7 @@ const LeftSidebar = () => {
       {/* Sidebar principal */}
       <div className='px-4 border-r border-gray-300 w-64 bg-white'>
         <div className='flex flex-col'>
-          <h1 className='my-8 pl-3 font-bold text-xl'>LOGO</h1>
+          <h1 className='my-8 pl-3 font-bold text-xl'>DEKANSTA</h1>
           <div>
             {
               sidebarItems.map((item, index) => (
