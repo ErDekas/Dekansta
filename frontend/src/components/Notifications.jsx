@@ -10,7 +10,7 @@ const Notifications = () => {
   const [showNotifications, setShowNotifications] = useState(false);
 
   // API base URL - ajusta según tu configuración
-  const API_BASE_URL = 'http://localhost:5000/api/v1/notification';
+  const API_BASE_URL = 'https://dekansta.onrender.com/api/v1/notification';
 
   useEffect(() => {
     loadNotifications();
