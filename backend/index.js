@@ -38,7 +38,16 @@ app.get("/*splat", (req,res)=>{
 })
 
 
-server.listen(PORT, () => {
-    connectDB();
-    console.log(`Server listen at port ${PORT}`);
-});
+const startServer = async () => {
+  try {
+    await connectDB();
+    server.listen(PORT, () => {
+      console.log(`✅ Servidor escuchando en el puerto ${PORT}`);
+    });
+  } catch (err) {
+    console.error("❌ Error al conectar con MongoDB:", err.message);
+    process.exit(1);
+  }
+};
+
+startServer();
